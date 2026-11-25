@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration Form</title>
+<script>
+ function validateForm()
+ {
+var fname = document.getElementById("fname").value;
+var lname = document.getElementById("lname").value;
+var email = document.getElementById("email").value;
+var mobile = document.getElementById("mobile").value;
+
+var namePattern = /^[A-Za-z]+$/;
+var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+var mobilePattern = /^[0-9]{10}$/;
+
+if (!namePattern.test(fname))
+{
+alert("Enter a valid First Name");
+return false;
+}
+if (!namePattern.test(lname))
+{
+alert("Enter a valid Last Name");
+
+return false;
+}
+if (!emailPattern.test(email))
+{
+alert("Enter a valid Email ID");
+return false;
+}
+if (!mobilePattern.test(mobile))
+{
+alert("Enter a valid 10 digit Mobile Number");
+return false;
+}
+alert("Form submitted successfully");
+return true;
+}
+    </script>
+    
+</head>
+
+<body>
+
+<h1>STUDENT REGISTRATION FORM</h1>
+
+<form onsubmit="return validateForm()">
+
+<table border="2" width="70%">
+
+<tr>
+    <td>FIRST NAME:</td>
+    <td><input type="text" id="fname" required></td>
+</tr>
+
+<tr>
+    <td>LAST NAME:</td>
+    <td><input type="text" id="lname" required></td>
+</tr>
+
+<tr>
+    <td>EMAIL ID:</td>
+    <td><input type="text" id="email" required></td>
+</tr>
+
+<tr>
+    <td>DOB</td>
+    <td><input type="date" name="dob"></td>
+</tr>
+
+<tr>
+    <td>MOBILE NUMBER</td>
+    <td><input type="text" id="mobile" maxlength="10" required></td>
+</tr>
+
+<tr>
+    <td>GENDER</td>
+    <td>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+    </td>
+</tr>
+
+<tr>
+    <td>ADDRESS</td>
+    <td><textarea rows="2" cols="25"></textarea></td>
+</tr>
+
+<tr>
+    <td>CITY</td>
+    <td>
+        <input type="text" maxlength="30">
+        (max 30 characters)
+    </td>
+</tr>
+
+<tr>
+    <td>PIN CODE</td>
+    <td>
+        <input type="number">
+        (6 digit number)
+    </td>
+</tr>
+
+<tr>
+    <td>STATE</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>COUNTRY</td>
+    <td><input type="text" value="India"></td>
+</tr>
+
+<tr>
+    <td>HOBBIES</td>
+    <td>
+        <input type="checkbox">Dancing
+        <input type="checkbox">Singing
+        <input type="checkbox">Painting
+        <input type="checkbox">Other
+        <input type="text" size="12">
+    </td>
+</tr>
+
+<tr>
+    <td>Qualification</td>
+    <td>
+        <table border="0" width="100%">
+            <tr>
+                <th>SL NO</th>
+                <th>Examination</th>
+                <th>BOARD</th>
+                <th>PERCENTAGE</th>
+                <th>YEAR OF PASSING</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>DEGREE</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>MASTERS</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
+<tr>
+    <td>COURSE APPLIED FOR</td>
+    <td>
+        <input type="radio" name="course">MCA
+        <input type="radio" name="course">M.Tech
+        <input type="radio" name="course">M.Sc
+        <input type="radio" name="course">Ph.D
+    </td>
+</tr>
+
+<tr>
+    <td>PASSWORD</td>
+    <td><input type="password" maxlength="30"></td>
+</tr>
+
+<tr>
+    <td>Date of TC:</td>
+    <td><input type="date"></td>
+</tr>
+
+<tr>
+    <td colspan="2" align="center">
+        <input type="submit" value="SUBMIT">
+        <input type="reset" value="RESET">
+    </td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
